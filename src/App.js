@@ -1,15 +1,12 @@
-import Header from './components/Header.js';
+import Header from './components/Header'
+import Menu from './components/Menu';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      {/* <header className="App-header"> */ }
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      {/* </header> */ }
+      <Header />
+      <Menu />
     </div>
   );
 }

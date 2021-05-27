@@ -1,7 +1,23 @@
 header {
     background-color: #094068;
     color: white;
-    font-size: larger;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-utt {
+    margin: 0.5em;
+    max-height: 4em;
+}
+
+#header-title {
+    font-size: xx-large;
+}
+
+#branch {
+    margin: 0.5em;
 }

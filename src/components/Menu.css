@@ -1,0 +1,21 @@
+.menu-root {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.menu-container {
+    display: flex;
+    flex-flow: column nowrap;
+    /* align-items: center; */
+}
+
+.menu-item {
+    font-size: x-large;
+    margin: 0.5em;
+}
+
+button.menu-item {
+    padding: 0.1em;
+}
