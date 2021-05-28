@@ -17,7 +17,7 @@ function App() {
                 </Route>
 
                 <Route path={ Routes.gestionEnseignants }>
-                    gestionEnseignants
+                    <GestionEnseignants />
                 </Route>
 
                 <Route path={ Routes.gestionUE }>

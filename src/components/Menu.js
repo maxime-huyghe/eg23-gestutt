@@ -1,17 +1,9 @@
 import './Menu.css'
 import LinkButton from './LinkButton'
 import Routes from '../routes'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useHistory
-} from "react-router-dom"
 
 function Menu() {
     return (
-        <Router>
             <div className='menu-container menu-root'>
                 <LinkButton to={ Routes.gestionEnseignants } className='menu-item'>
                     Gestion des enseignants
@@ -54,8 +46,7 @@ function Menu() {
                     </LinkButton>
 
                 </fieldset>
-            </div>
-        </Router>
+        </div>
     )
 }
 

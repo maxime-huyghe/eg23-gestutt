@@ -5,9 +5,9 @@ function Header() {
     return (
         <header>
             <img src={ logo } alt='logo' id='logo-utt' />
-            <div id='header-title'>
+            <h1 id='header-title'>
                 Gest'UTT
-            </div>
+            </h1>
             <div>
                 <label htmlFor='branch'>Branche :</label>
                 <select id='branch'>

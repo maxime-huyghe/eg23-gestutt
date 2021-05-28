@@ -1,0 +1,53 @@
+.ge-root {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.recherche {
+    display: flex;
+    flex: row nowrap;
+}
+
+.recherche input {
+    width: 100%;
+}
+
+.recherche b {
+    font-size: xx-large;
+    padding-inline-start: 0.3em;
+    color: #094068;
+    cursor: pointer;
+}
+
+.ge-table {
+    margin-block-start: 1em;
+    border: none;
+    border-collapse: collapse;
+}
+
+.ge-table td, th {
+    text-align: center;
+}
+
+.ge-table th {
+    padding-block-end: 1em;
+}
+
+.ge-table td {
+    padding-block-start: 1em;
+    padding-block-end: 1em;
+    padding-inline-start: 0.5em;
+    padding-inline-end: 0.5em;
+}
+
+.ge-table tbody tr {
+    border-top: 1px solid black;
+}
+
+.ge-table tr:nth-child(even) {
+    background: #E8E8E8;
+}
