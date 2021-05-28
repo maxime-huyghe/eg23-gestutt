@@ -2,13 +2,14 @@
 // and ensures route names are the same everywhere.
 
 const Routes = {
-    gestionEnseignants: 'gestionEnseignants',
-    gestionUE: 'gestionUE',
-    etuNiveaux: 'etuNiveaux',
-    etuCategorie: 'etuCategorie',
-    statsFlux: 'statsFlux',
-    semestreExcellence: 'semestreExcellence',
-    semestreRetard: 'semestreRetard',
+    slash: '/',
+    gestionEnseignants: '/gestionEnseignants',
+    gestionUE: '/gestionUE',
+    etuNiveaux: '/etuNiveaux',
+    etuCategorie: '/etuCategorie',
+    statsFlux: '/statsFlux',
+    semestreExcellence: '/semestreExcellence',
+    semestreRetard: '/semestreRetard',
 }
 
 export default Routes
