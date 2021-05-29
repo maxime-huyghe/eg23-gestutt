@@ -1,20 +1,24 @@
 import './Header.css'
 import logo from '../utt.svg'
+import Routes from '../routes'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
         <header>
             <img src={ logo } alt='logo' id='logo-utt' />
-            <h1 id='header-title'>
-                Gest'UTT
-            </h1>
+            <Link to={ Routes.slash }>
+                <h1 id='header-title'>
+                    Gest'UTT
+                </h1>
+            </Link>
             <div>
                 <label htmlFor='branch'>Branche :</label>
                 <select id='branch'>
                     <option>ISI</option>
                 </select>
             </div>
-        </header>
+        </header >
     )
 }
 export default Header
