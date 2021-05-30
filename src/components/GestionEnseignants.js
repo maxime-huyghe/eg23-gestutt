@@ -33,26 +33,7 @@ const GestionEnseignants = () => {
     if (ajoutEnseignants) {
         return <div className='ge-root'>
             <h2>Ajouter un enseignant</h2>
-            <form>
-                <label htmlFor='nom'>Nom :</label>
-                <input type='text' placeholder='Nom' id='nom' />
-
-                <label htmlFor='prenom'>Prénom :</label>
-                <input type='text' placeholder='Prénom' id='prenom' />
-
-                <label htmlFor='type'>Type :</label>
-                <input type='text' placeholder='Professeur, etc' id='type' />
-
-                <label htmlFor='listeues'>Liste d'UEs :</label>
-                <input type='text' placeholder="Liste d\'UEs" id='listeues' />
-
-                <label htmlFor='nbhsup'>Nombre d'heures sup :</label>
-                <input type='text' placeholder='...' id='nbhsup' />
-
-                <label htmlFor='date'>Date d'embauche :</label>
-                <input type='text' placeholder='15 juin 2021' id='date' />
-            </form>
-
+            <AjouterEnseignantForm />
             <button onClick={ validerAjout }>
                 Valider
             </button>
@@ -94,5 +75,26 @@ const ListeEnseignants = ({ enseignants }) =>
             ) }
         </tbody>
     </table>
+
+const AjouterEnseignantForm = () =>
+    <form>
+        <label htmlFor='nom'>Nom :</label>
+        <input type='text' placeholder='Nom' id='nom' />
+
+        <label htmlFor='prenom'>Prénom :</label>
+        <input type='text' placeholder='Prénom' id='prenom' />
+
+        <label htmlFor='type'>Type :</label>
+        <input type='text' placeholder='Professeur, etc' id='type' />
+
+        <label htmlFor='listeues'>Liste d'UEs :</label>
+        <input type='text' placeholder="Liste d\'UEs" id='listeues' />
+
+        <label htmlFor='nbhsup'>Nombre d'heures sup :</label>
+        <input type='text' placeholder='...' id='nbhsup' />
+
+        <label htmlFor='date'>Date d'embauche :</label>
+        <input type='text' placeholder='15 juin 2021' id='date' />
+    </form>
 
 export default GestionEnseignants
