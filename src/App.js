@@ -1,9 +1,10 @@
-import Header from './components/Header'
-import Menu from './components/Menu'
 import './App.css'
 import { Route, Switch } from 'react-router'
+import Header from './components/Header'
+import Menu from './components/Menu'
 import Routes from './routes'
 import GestionEnseignants from './components/GestionEnseignants'
+import GestionUEs from './components/GestionUEs'
 
 function App() {
     return (
@@ -16,31 +17,35 @@ function App() {
                     <Menu />
                 </Route>
 
-                <Route path={ Routes.gestionEnseignants }>
+                <Route exact path={ Routes.gestionEnseignants }>
                     <GestionEnseignants />
                 </Route>
 
-                <Route path={ Routes.gestionUE }>
-                    ue
+                <Route exact path={ Routes.gestionUE }>
+                    <GestionUEs />
                 </Route>
 
-                <Route path={ Routes.etuNiveaux }>
+                <Route exact path={ Routes.ueData }>
+                    data
+                </Route>
+
+                <Route exact path={ Routes.etuNiveaux }>
                     niveaux
                 </Route>
 
-                <Route path={ Routes.etuCategorie }>
+                <Route exact path={ Routes.etuCategorie }>
                     categorie
                 </Route>
 
-                <Route path={ Routes.statsFlux }>
+                <Route exact path={ Routes.statsFlux }>
                     stats
                 </Route>
 
-                <Route path={ Routes.semestreExcellence }>
+                <Route exact path={ Routes.semestreExcellence }>
                     excellence
                 </Route>
 
-                <Route path={ Routes.semestreRetard }>
+                <Route exact path={ Routes.semestreRetard }>
                     retard
                 </Route>
             </Switch>
