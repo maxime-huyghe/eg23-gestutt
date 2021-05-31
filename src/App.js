@@ -5,8 +5,11 @@ import Menu from './components/Menu'
 import Routes from './routes'
 import GestionEnseignants from './components/GestionEnseignants'
 import GestionUEs from './components/GestionUEs'
+import Title from './components/Title'
 
 function App() {
+    const gestUtt = `Gest'UTT`
+
     return (
         <div className="App">
             <Header />
@@ -14,18 +17,22 @@ function App() {
             <Switch>
 
                 <Route exact path={ Routes.slash }>
+                    <Title is={ gestUtt } />
                     <Menu />
                 </Route>
 
                 <Route exact path={ Routes.gestionEnseignants }>
+                    <Title is={ `${ gestUtt } - Gestion des enseignants` } />
                     <GestionEnseignants />
                 </Route>
 
                 <Route exact path={ Routes.gestionUE }>
+                    <Title is={ `${ gestUtt } - Gestion des UEs` } />
                     <GestionUEs />
                 </Route>
 
                 <Route exact path={ Routes.ueData }>
+                    <Title is={ `${ gestUtt } - Gestion de l'UE` } />
                     data
                 </Route>
 
