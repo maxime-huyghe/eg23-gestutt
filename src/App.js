@@ -6,6 +6,7 @@ import Routes from './routes'
 import GestionEnseignants from './components/GestionEnseignants'
 import GestionUEs from './components/GestionUEs'
 import Title from './components/Title'
+import UEData from './components/UEData'
 
 function App() {
     const gestUtt = `Gest'UTT`
@@ -33,7 +34,7 @@ function App() {
 
                 <Route exact path={ Routes.ueData }>
                     <Title is={ `${ gestUtt } - Gestion de l'UE` } />
-                    data
+                    <UEData />
                 </Route>
 
                 <Route exact path={ Routes.etuNiveaux }>

@@ -23,10 +23,12 @@ const GestionEnseignants = () => {
 
     const [ ajoutEnseignants, setAjoutEnseignants ] = useState(false)
 
-    // const plusClick = () => setEnseignants(enseignants.concat(enseignants[ Math.floor(Math.random() * (enseignants.length - 1)) ]))
     const plusClick = () => setAjoutEnseignants(true)
     const validerAjout = () => {
-        setEnseignants(enseignants.concat(enseignants[ Math.floor(Math.random() * (enseignants.length - 1)) ]))
+        setEnseignants(ens => {
+            const enseignantToAdd = ens[ Math.floor(Math.random() * (ens.length - 1)) ]
+            return ens.concat(enseignantToAdd)
+        })
         setAjoutEnseignants(false)
     }
 
