@@ -9,6 +9,8 @@ import Title from './components/Title'
 import UEData from './components/UEData'
 import GestionEtuNiveau from './components/GestionEtuNiveau'
 import GestionEtuCategorie from './components/GestionEtuCategorie'
+import StatistiqueEntreeSortie from './components/StatsEntreeSorties'
+import GestionSemestreExcellent from './components/GestionSemestreExcellent'
 
 function App() {
     const gestUtt = `Gest'UTT`
@@ -50,11 +52,13 @@ function App() {
                 </Route>
 
                 <Route exact path={ Routes.statsFlux }>
-                    stats
+                    <Title is={ `${ gestUtt } - Statistiques Entrées sorties` } />
+                    <StatistiqueEntreeSortie />
                 </Route>
 
                 <Route exact path={ Routes.semestreExcellence }>
-                    excellence
+                    <Title is={ `${ gestUtt } - Gestion du semestre en cours` } />
+                    <GestionSemestreExcellent />
                 </Route>
 
                 <Route exact path={ Routes.semestreRetard }>
