@@ -7,6 +7,8 @@ import GestionEnseignants from './components/GestionEnseignants'
 import GestionUEs from './components/GestionUEs'
 import Title from './components/Title'
 import UEData from './components/UEData'
+import GestionEtuNiveau from './components/GestionEtuNiveau'
+import GestionEtuCategorie from './components/GestionEtuCategorie'
 
 function App() {
     const gestUtt = `Gest'UTT`
@@ -38,11 +40,13 @@ function App() {
                 </Route>
 
                 <Route exact path={ Routes.etuNiveaux }>
-                    niveaux
+                    <Title is={ `${ gestUtt } - Répartition des étudiant par niveaux` } />
+                    <GestionEtuNiveau />
                 </Route>
 
                 <Route exact path={ Routes.etuCategorie }>
-                    categorie
+                    <Title is={ `${ gestUtt } - Répartition des étudiant par catégorie` } />
+                    <GestionEtuCategorie />
                 </Route>
 
                 <Route exact path={ Routes.statsFlux }>
