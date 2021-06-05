@@ -11,6 +11,7 @@ import GestionEtuNiveau from './components/GestionEtuNiveau'
 import GestionEtuCategorie from './components/GestionEtuCategorie'
 import StatistiqueEntreeSortie from './components/StatsEntreeSorties'
 import GestionSemestreExcellent from './components/GestionSemestreExcellent'
+import GestionSemestreRetard from './components/GestionSemstreRetard'
 
 function App() {
     const gestUtt = `Gest'UTT`
@@ -62,7 +63,8 @@ function App() {
                 </Route>
 
                 <Route exact path={ Routes.semestreRetard }>
-                    retard
+                    <Title is={ `${ gestUtt } - Gestion du semestre en cours` } />
+                    <GestionSemestreRetard />
                 </Route>
             </Switch>
         </div>

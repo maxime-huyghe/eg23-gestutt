@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './GestionSemestreExcellent.css'
+import './GestionSemestre.css'
 
 const GestionSemestreExcellent = () => {
     let [ etudiants, setEtudiants ] = useState([
@@ -8,21 +8,21 @@ const GestionSemestreExcellent = () => {
             prenom: 'test',
             retardCS: '1',
             retardTM: '2',
-            status: "OK"
+            status: "excellent"
         },
         {
             nom: 'Julie',
             prenom: 'test',
             retardCS: '1',
             retardTM: '2',
-            status: "unknown"
+            status: "excellent"
         },
         {
             nom: 'Julie',
             prenom: 'test',
             retardCS: '1',
             retardTM: '2',
-            status: "attention"
+            status: "excellent"
         },
         {
             nom: 'Julie',
@@ -46,7 +46,7 @@ const GestionSemestreExcellent = () => {
 
     if (ajoutEtudiants) {
         return <div className='ge-root'>
-            <h2>Ajouter un enseignant</h2>
+            <h2>Ajouter un étudiant</h2>
             <AjouterEtudiantsForm />
             <button onClick={ validerAjout }>
                 Valider
@@ -54,7 +54,7 @@ const GestionSemestreExcellent = () => {
         </div>
     } else {
         return <div className='ge-root'>
-            <h2>Gestion des enseignants</h2>
+            <h2>Gestion du semestre par excellence</h2>
             <div className='recherche'>
                 <input placeholder='Recherche' />
                 <b onClick={ plusClick }>+</b>
