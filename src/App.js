@@ -11,7 +11,7 @@ import GestionEtuNiveau from './components/GestionEtuNiveau'
 import GestionEtuCategorie from './components/GestionEtuCategorie'
 import StatistiqueEntreeSortie from './components/StatsEntreeSorties'
 import GestionSemestreExcellent from './components/GestionSemestreExcellent'
-import GestionSemestreRetard from './components/GestionSemstreRetard'
+import GestionSemestreRetard from './components/GestionSemestreRetard'
 
 function App() {
     const gestUtt = `Gest'UTT`

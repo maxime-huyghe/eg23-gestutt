@@ -1,11 +1,26 @@
-.ge-table tbody .OK {
-    background-color: green;
+.ok {
+    background-color: lightgreen !important;
 }
 
-.ge-table tbody .unknown{
-    background-color: yellow;
+.retard{
+    background-color: gold !important;
 }
 
-.ge-table tbody .attention {
-    background-color: red;
+.critique {
+    background-color: firebrick !important;
+}
+
+.legend {
+    padding-inline: 10px;
+    padding-block: 3px;
+    margin-inline-end: 5px;
+}
+
+.legend-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.legend-container > div {
+    margin-block: 5px;
 }
