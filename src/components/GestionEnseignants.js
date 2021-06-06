@@ -54,10 +54,10 @@ const GestionEnseignants = () => {
             <h2>Gestion des enseignants</h2>
             <div className='recherche'>
                 <input placeholder='Recherche' />
-                <b onClick={ plusClick }>+</b>
+                <button onClick={ plusClick }><b>+</b>Ajouter</button>
             </div>
-            { ajoutAnullable && <button onClick={ anullerAjout }>Annuler le dernier ajout</button> }
             <ListeEnseignants enseignants={ enseignants } />
+            { ajoutAnullable && <button onClick={ anullerAjout }>Annuler le dernier ajout</button> }
         </div>
     }
 }
@@ -106,7 +106,7 @@ const AjouterEnseignantForm = () =>
         <input type='text' placeholder='...' id='nbhsup' />
 
         <label htmlFor='date'>Date d'embauche :</label>
-        <input type='text' placeholder='15 juin 2021' id='date' />
+        <input type='date' placeholder='15 juin 2021' id='date' />
     </form>
 
 export default GestionEnseignants

@@ -15,10 +15,14 @@
 }
 
 .recherche b {
-    font-size: xx-large;
-    padding-inline-start: 0.3em;
+    font-size: x-large;
     color: #094068;
-    cursor: pointer;
+}
+
+.recherche button {
+    margin: 0px;
+    font-size: large;
+    margin-inline-start: 0.3em;
 }
 
 .ge-table {
