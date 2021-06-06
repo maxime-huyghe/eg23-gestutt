@@ -3,33 +3,41 @@ import './GestionSemestre.css'
 const GestionSemestreExcellent = () => {
     let etudiants = [
         {
-            nom: 'Jacques',
-            prenom: 'test',
-            retardCS: '1',
-            retardTM: '2',
-            status: "excellent"
+            nom: 'Dupont',
+            prenom: 'Jacques',
+            a: 9,
+            b: 9,
         },
         {
-            nom: 'Julie',
-            prenom: 'test',
-            retardCS: '1',
-            retardTM: '2',
-            status: "excellent"
+            nom: 'Dupond',
+            prenom: 'Marie',
+            a: 11,
+            b: 7,
         },
         {
-            nom: 'Julie',
-            prenom: 'test',
-            retardCS: '1',
-            retardTM: '2',
-            status: "excellent"
+            nom: 'Dupont',
+            prenom: 'Jacques',
+            a: 9,
+            b: 9,
         },
         {
-            nom: 'Julie',
-            prenom: 'test',
-            retardCS: '1',
-            retardTM: '2',
-            status: "excellent"
-        }
+            nom: 'Dupond',
+            prenom: 'Marie',
+            a: 11,
+            b: 7,
+        },
+        {
+            nom: 'Dupont',
+            prenom: 'Jacques',
+            a: 9,
+            b: 9,
+        },
+        {
+            nom: 'Dupond',
+            prenom: 'Marie',
+            a: 11,
+            b: 7,
+        },
     ]
 
     return <div className='ge-root'>
@@ -45,17 +53,19 @@ const ListeEtudiants = ({ etudiants }) =>
     <table className='ge-table'>
         <thead>
             <tr>
-                <th>Status</th>
                 <th>Nom</th>
-                <th>Retard</th>
+                <th>Prénom</th>
+                <th>Nombre de A</th>
+                <th>Nombre de B</th>
             </tr>
         </thead>
         <tbody>
-            { etudiants.map(ens =>
-                <tr key={ `${ ens.nom }${ ens.prénom }` } className={ ens.status }>
-                    <td>{ ens.status }</td>
-                    <td>{ ens.nom } { ens.prenom }</td>
-                    <td>{ ens.retardCS } CS | { ens.retardTM } TM</td>
+            { etudiants.map((etu, idx) =>
+                <tr key={ idx }>
+                    <td>{ etu.nom }</td>
+                    <td>{ etu.prenom }</td>
+                    <td>{ etu.a }</td>
+                    <td>{ etu.b }</td>
                 </tr>
             ) }
         </tbody>

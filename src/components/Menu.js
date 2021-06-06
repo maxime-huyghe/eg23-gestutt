@@ -38,11 +38,11 @@ function Menu() {
                     </legend>
 
                     <LinkButton to={ Routes.semestreExcellence } className='menu-item'>
-                        Trié par excellence
+                    Étudiants candidats à l'excellence
                     </LinkButton>
 
                     <LinkButton to={ Routes.semestreRetard } className='menu-item'>
-                        Trié par retard
+                    Étudiants en retard
                     </LinkButton>
 
                 </fieldset>
