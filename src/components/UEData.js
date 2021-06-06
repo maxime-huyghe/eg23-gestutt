@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import { VictoryArea, VictoryAxis, VictoryBar, VictoryChart, VictoryLegend, VictoryStack, VictoryTheme } from 'victory'
 import '../css/flex.css'
 import EffectifsChart from './EffectifsChart'
 import EncadrementChart from './EncadrementChart'
+import reussite from '../reussite.png'
 
 const UEData = () => {
     return <div className='outer-flex'>
@@ -10,6 +9,10 @@ const UEData = () => {
         <h3>UE42 - Foobarisation des bazqux</h3>
         <EffectifsChart />
         <EncadrementChart />
+        <div style={ { width: '100%', display: 'flex' } }>
+            <h4>Taux de réussite :</h4>
+        </div>
+        <img src={ reussite } ></img>
     </div >
 }
 
