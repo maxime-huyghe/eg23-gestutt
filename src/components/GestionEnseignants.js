@@ -10,6 +10,7 @@ const GestionEnseignants = () => {
             UEs: [ 'LO12', 'EG23' ],
             hsup: 5,
             date: new Date(2005, 2, 20),
+            justAdded: false,
         },
         {
             nom: 'Lefèvre',
@@ -18,6 +19,7 @@ const GestionEnseignants = () => {
             UEs: [ 'AB12' ],
             hsup: 9,
             date: new Date(2004, 11, 2),
+            justAdded: false,
         }
     ])
 
@@ -27,9 +29,16 @@ const GestionEnseignants = () => {
     const validerAjout = () => {
         setEnseignants(ens => {
             const enseignantToAdd = ens[ Math.floor(Math.random() * (ens.length - 1)) ]
-            return ens.concat(enseignantToAdd)
+            return ens.map(ens => ({ ...ens, justAdded: false })).concat({ ...enseignantToAdd, justAdded: true })
         })
         setAjoutEnseignants(false)
+        setAjoutAnullable(true)
+    }
+
+    const [ ajoutAnullable, setAjoutAnullable ] = useState(false)
+    const anullerAjout = () => {
+        setEnseignants(ens => ens.slice(0, ens.length - 1))
+        setAjoutAnullable(false)
     }
 
     if (ajoutEnseignants) {
@@ -47,6 +56,7 @@ const GestionEnseignants = () => {
                 <input placeholder='Recherche' />
                 <b onClick={ plusClick }>+</b>
             </div>
+            { ajoutAnullable && <button onClick={ anullerAjout }>Annuler le dernier ajout</button> }
             <ListeEnseignants enseignants={ enseignants } />
         </div>
     }
@@ -66,7 +76,7 @@ const ListeEnseignants = ({ enseignants }) =>
         </thead>
         <tbody>
             { enseignants.map(ens =>
-                <tr key={ `${ ens.nom }${ ens.prénom }` }>
+                <tr className={ ens.justAdded && 'just-added' } key={ `${ ens.nom }${ ens.prénom }` }>
                     <td>{ ens.nom }</td>
                     <td>{ ens.prénom }</td>
                     <td>{ ens.type }</td>

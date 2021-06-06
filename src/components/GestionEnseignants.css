@@ -78,3 +78,7 @@ input, button {
 button {
     margin-block-start: 1em;
 }
+
+.just-added {
+    background: lightgreen !important;
+}
