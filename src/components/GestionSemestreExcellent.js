@@ -1,8 +1,7 @@
-import { useState } from 'react'
 import './GestionSemestre.css'
 
 const GestionSemestreExcellent = () => {
-    let [ etudiants, setEtudiants ] = useState([
+    let etudiants = [
         {
             nom: 'Jacques',
             prenom: 'test',
@@ -31,37 +30,15 @@ const GestionSemestreExcellent = () => {
             retardTM: '2',
             status: "excellent"
         }
-    ])
+    ]
 
-    const [ ajoutEtudiants, setAjoutEtudiants ] = useState(false)
-
-    const plusClick = () => setAjoutEtudiants(true)
-    const validerAjout = () => {
-        setEtudiants(ens => {
-            const etudiantToAdd = ens[ Math.floor(Math.random() * (ens.length - 1)) ]
-            return ens.concat(etudiantToAdd)
-        })
-        setAjoutEtudiants(false)
-    }
-
-    if (ajoutEtudiants) {
-        return <div className='ge-root'>
-            <h2>Ajouter un étudiant</h2>
-            <AjouterEtudiantsForm />
-            <button onClick={ validerAjout }>
-                Valider
-            </button>
+    return <div className='ge-root'>
+        <h2>Gestion du semestre par excellence</h2>
+        <div className='recherche'>
+            <input placeholder='Recherche' />
         </div>
-    } else {
-        return <div className='ge-root'>
-            <h2>Gestion du semestre par excellence</h2>
-            <div className='recherche'>
-                <input placeholder='Recherche' />
-                <b onClick={ plusClick }>+</b>
-            </div>
-            <ListeEtudiants etudiants={ etudiants } />
-        </div>
-    }
+        <ListeEtudiants etudiants={ etudiants } />
+    </div>
 }
 
 const ListeEtudiants = ({ etudiants }) =>
@@ -75,7 +52,7 @@ const ListeEtudiants = ({ etudiants }) =>
         </thead>
         <tbody>
             { etudiants.map(ens =>
-                <tr key={ `${ ens.nom }${ ens.prénom }` } class={ ens.status }>
+                <tr key={ `${ ens.nom }${ ens.prénom }` } className={ ens.status }>
                     <td>{ ens.status }</td>
                     <td>{ ens.nom } { ens.prenom }</td>
                     <td>{ ens.retardCS } CS | { ens.retardTM } TM</td>
@@ -83,24 +60,5 @@ const ListeEtudiants = ({ etudiants }) =>
             ) }
         </tbody>
     </table>
-
-const AjouterEtudiantsForm = () =>
-    <form>
-        <label htmlFor='nom'>Nom :</label>
-        <input type='text' placeholder='Nom' id='nom' />
-
-        <label htmlFor='prenom'>Prénom :</label>
-        <input type='text' placeholder='Prénom' id='prenom' />
-
-        <label htmlFor='retardCS'>retardCS :</label>
-        <input type='text' placeholder='0' id='retardCS' />
-
-        <label htmlFor='retardTM'>retardTM :</label>
-        <input type='text' placeholder='0' id='retardTM' />
-
-        <label htmlFor='status'>status :</label>
-        <input type='text' placeholder='OK' id='status' />
-
-    </form>
 
 export default GestionSemestreExcellent
