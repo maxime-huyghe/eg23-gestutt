@@ -37,6 +37,13 @@ const GestionSemestreRetard = () => {
         <div className='recherche'>
             <input placeholder='Recherche' />
         </div>
+        <div>
+            Trier par : <select>
+                <option>Total</option>
+                <option>CS</option>
+                <option>TM</option>
+            </select>
+        </div>
         <div className='legend-container'>
             <div>
                 <span className='legend ok'>
