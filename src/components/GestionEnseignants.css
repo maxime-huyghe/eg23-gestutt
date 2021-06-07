@@ -68,11 +68,11 @@ form label {
     text-align: end;
 }
 
-form input {
+form input, select {
     grid-column: controls;
     grid-row: auto;
 }
-input, button {
+input, button, select {
     padding: .3em;
     border-radius: 0;
     border: 1px solid #aaa;

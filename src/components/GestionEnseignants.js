@@ -97,10 +97,15 @@ const AjouterEnseignantForm = () =>
         <input type='text' placeholder='Prénom' id='prenom' />
 
         <label htmlFor='type'>Type :</label>
-        <input type='text' placeholder='Professeur, etc' id='type' />
+        <select id='type'>
+            <option>Contractuel</option>
+            <option selected>Professeur</option>
+            <option>Maître de conférence</option>
+            <option>Prag</option>
+        </select>
 
         <label htmlFor='listeues'>Liste d'UEs :</label>
-        <input type='text' placeholder="Liste d\'UEs" id='listeues' />
+        <input type='text' placeholder="Liste d'UEs" id='listeues' />
 
         <label htmlFor='nbhsup'>Nombre d'heures sup :</label>
         <input type='text' placeholder='...' id='nbhsup' />
