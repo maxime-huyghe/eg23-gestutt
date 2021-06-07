@@ -33,7 +33,7 @@ const GestionSemestreRetard = () => {
     ]
 
     return <div className='ge-root'>
-        <h2>Gestion du semestre par retard</h2>
+        <h2>Étudiants en retard</h2>
         <div className='recherche'>
             <input placeholder='Recherche' />
         </div>

@@ -19,11 +19,11 @@ function Menu() {
                     </legend>
 
                     <LinkButton to={ Routes.etuNiveaux } className='menu-item'>
-                        Trié par niveau
+                        Répartition par niveau
                     </LinkButton>
 
                     <LinkButton to={ Routes.etuCategorie } className='menu-item'>
-                        Trié par catégorie
+                        Répartition par catégorie
                     </LinkButton>
 
                 </fieldset>

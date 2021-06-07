@@ -4,7 +4,7 @@ import './GestionEtu.css'
 
 const GestionEtuNiveau = () => {
     return <div className='outer-flex' id="graph" >
-        <h2>Gestion des étudiant par niveaux</h2>
+        <h2>Répartition des étudiants par niveaux</h2>
         <img src={ image } width="50%" ></img>
     </div >
 }

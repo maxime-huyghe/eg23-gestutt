@@ -41,7 +41,7 @@ const GestionSemestreExcellent = () => {
     ]
 
     return <div className='ge-root'>
-        <h2>Gestion du semestre par excellence</h2>
+        <h2>Étudiants candidats à l'excellence</h2>
         <div className='recherche'>
             <input placeholder='Recherche' />
         </div>

@@ -4,7 +4,7 @@ import './GestionEtu.css'
 
 const GestionEtuCategorie = () => {
     return <div className='outer-flex' id="graph" >
-        <h2>Gestion des étudiant par Catégorie</h2>
+        <h2>Répartition des étudiant par catégorie</h2>
         <img src={ image } width="50%" ></img>
     </div >
 }
